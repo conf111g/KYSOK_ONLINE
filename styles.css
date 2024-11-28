@@ -1,0 +1,467 @@
+body {
+	font-family: Arial, sans-serif;
+	margin: 0;
+	padding: 0;
+	background: linear-gradient(135deg, #1a1a1a, #000000);
+	color: #f9f9f9;
+	}
+header {
+	background: linear-gradient(90deg, #b00020, #800000);
+	color: #fff;
+	padding: 20px;
+	text-align: center;
+	box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+	font-size: 20px;
+}
+.container {
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+	max-width: 1200px;
+	margin: 20px auto;
+	padding: 20px;
+}
+.section {
+	background: linear-gradient(135deg, #2b2b2b, #1a1a1a);
+	border-radius: 12px;
+	box-shadow: 0 4px 15px rgba(0, 0, 0, 0.7);
+	padding: 20px;
+}
+.section h2 {
+	margin-top: 0;
+	color: #b00020;
+	font-size: 40px;
+}
+.section p {
+	margin-top: 0;
+	color: #fff;
+	font-size: 20px;
+}
+.section a {
+	text-decoration: none; /* Убираем стандартное подчеркивание */
+	color: #b00020; /* Красный цвет текста */
+	font-weight: bold; /* Полужирное начертание */
+	transition: color 0.3s ease, text-shadow 0.3s ease; /* Плавный переход цвета и теней */
+	
+}
+
+.section a:hover {
+	color: #ff5050; /* Более яркий красный при наведении */
+	text-shadow: 0 0 5px #ff5050; /* Добавляем эффект свечения */
+
+}
+
+.section a:active {
+	color: #a0001a; /* Темный красный при нажатии */
+}
+.comparison {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 20px;
+
+}
+.tool {
+	flex: 1 1 calc(33.333% - 20px);
+	background: linear-gradient(135deg, #400000, #600000);
+	border: 1px solid #b00020;
+	border-radius: 12px;
+	padding: 20px;
+	text-align: center;
+	transition: transform 0.3s, box-shadow 0.3s;
+	
+}
+.tool:hover {
+	transform: scale(1.05);
+	box-shadow: 0 6px 20px rgba(176, 0, 32, 0.8);
+}
+.tool img {
+	max-width: 100px;
+	margin-bottom: 15px;
+	border-radius: 50%;
+	border: 2px solid #b00020;
+}
+.tool h3 {
+	margin: 10px 0;
+	font-size: 18px;
+	color: #b00020;
+	font-size: 40px;
+}
+.tool p {
+	font-size: 14px;
+	color: #ddd;
+	font-size: 20px;
+}
+footer {
+	text-align: center;
+	background: linear-gradient(90deg, #b00020, #800000);
+	color: #fff;
+	padding: 10px;
+	margin-top: 20px;
+	box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.5);
+	font-size: 20px;
+}
+@media (max-width: 768px) {
+	.tool {
+		flex: 1 1 calc(50% - 20px);
+	}
+}
+@media (max-width: 480px) {
+	.tool {
+		flex: 1 1 100%;
+	}
+}
+/* ВВЕДЕНИЕ ВВЕДЕНИЕ ВВЕДЕНИЕ ВВЕДЕНИЕ ВВЕДЕНИЕ ВВЕДЕНИЕ ВВЕДЕНИЕ */
+.section {
+	position: relative;
+	background: linear-gradient(135deg, #2b2b2b, #1a1a1a);
+	border-radius: 12px;
+	box-shadow: 0 4px 15px rgba(0, 0, 0, 0.7);
+	padding: 20px;
+}
+.tooltip {
+	display: none;
+	position: absolute;
+	top: 30%;
+	left: 32%;
+	transform: translateX(0%);
+	background: #1a1a1a;
+	color: #f9f9f9;
+	padding: 15px;
+	border: 1px solid #b00020;
+	border-radius: 8px;
+	box-shadow: 0 4px 15px rgba(0, 0, 0, 0.7);
+	z-index: 10;
+	width: 35%;
+	text-align: left;
+	animation: fadeIn 0.3s ease-in-out;
+}
+.tooltip p {
+	margin: 0;
+	font-size: 19px;
+	color: #ddd;
+}
+.introduction:hover .tooltip {
+	display: block;
+}
+.intro-summary {
+	color: #ddd;
+	font-style: italic;
+}
+
+@keyframes fadeIn {
+	from {
+		opacity: 0;
+		transform: translateX(-50%) translateY(-10px);
+	}
+	to {
+		opacity: 1;
+		transform: translateX(-50%) translateY(0);
+	}
+}
+	.intro-box {
+	background: linear-gradient(135deg, #2b2b2b, #1a1a1a);
+	border: 2px solid #b00020;
+	border-radius: 12px;
+	padding: 20px;
+	box-shadow: 0 4px 15px rgba(0, 0, 0, 0.7);
+	color: #f9f9f9;
+	max-width: 600px;
+	margin: 20px auto;
+	font-size: 16px;
+	line-height: 1.6;
+	text-align: justify;
+	position: relative;
+}
+.tooltip p {
+	margin: 0 0 15px;
+	text-indent: 30px; /* Красная строка */
+}
+.tooltip p:last-child {
+	margin-bottom: 0;
+}
+.tooltip::before {
+	content: "📘";
+	position: absolute;
+	top: 0;
+	left: 20px;
+	font-size: 24px;
+	color: #b00020;
+}
+
+/* ВЫВОД ВЫВОД ВЫВОД ВЫВОД ВЫВОД ВЫВОД ВЫВОД ВЫВОД ВЫВОД ВЫВОД ВЫВОД ВЫВОД ВЫВОД */
+.section conclusion_z {
+	position: relative;
+	background: linear-gradient(135deg, #2b2b2b, #1a1a1a);
+	border-radius: 12px;
+	padding: 20px;
+	box-shadow: 0 4px 15px rgba(0, 0, 0, 0.7);
+	margin: 20px auto;
+	max-width: 600px;
+	text-align: justify;
+}
+
+.summary_z {
+	font-style: italic;
+	color: #ddd;
+	margin: 0;
+}
+
+.tooltip_z {
+	display: none;
+	background: #1a1a1a;
+	border: 20px solid #b00020;
+	border-radius: 12px;
+	padding: 20px;
+	color: #f9f9f9;
+	margin-top: 10px;
+	line-height: 1.6;
+	animation: fadeIn 0.3s ease-in-out;
+	font-size: 24px;
+}
+
+.conclusion:hover .tooltip_z {
+	display: block;
+}
+
+.tooltip_z p {
+	margin: 0 0 10px;
+	text-indent: 30px; /* Красная строка */
+}
+
+.tooltip_z p:last-child {
+	margin-bottom: 0;
+}
+
+@keyframes fadeIn {
+	from {
+		opacity: 0;
+		transform: translateY(-10px);
+	}
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+
+/* ФИГМА ФИГМА ФИГМА ФИГМА ФИГМА ФИГМА ФИГМА ФИГМА ФИГМА ФИГМА ФИГМА ФИГМА ФИГМА ФИГМА ФИГМА ФИГМА ФИГМА ФИГМА ФИГМА ФИГМА ФИГМА ФИГМА ФИГМА ФИГМА ФИГМА ФИГМА ФИГМА ФИГМА ФИГМА ФИГМА */
+	/* Контейнер для изображения */
+.imageF {
+	text-align: center; /* Центрируем изображение */
+	margin: 20px auto;
+	max-width: 600px; /* Ограничиваем ширину */
+}
+/* Изображение */
+.imageF img {
+	display: flex; /* Используем Flexbox */
+	justify-content: center; /* Горизонтальное центрирование */
+	align-items: center; /* Вертикальное центрирование */
+	height: 100vh; /* Высота контейнера */
+	width: 100%; /* Изображение адаптируется к ширине контейнера */
+	max-width: 600px; /* Максимальная ширина изображения */
+	height: auto; /* Сохраняем пропорции */
+	border-radius: 15px; /* Закругленные углы */
+	box-shadow: 0 8px 20px rgba(0, 0, 0, 0.7); /* Плавная тень */
+	transition: transform 0.3s ease, box-shadow 0.3s ease; /* Эффект при наведении */
+}
+/* Эффекты при наведении */
+.imageF img:hover {
+	transform: scale(1.05); /* Увеличение изображения */
+	box-shadow: 0 12px 30px rgba(0, 0, 0, 0.9); /* Усиление тени */
+}
+/* Основной контейнер */
+.containerF {
+	max-width: 800px;
+	background: #1a1a1a;
+	border: 2px solid #b00020;
+	border-radius: 12px;
+	box-shadow: 0 8px 20px rgba(0, 0, 0, 0.7);
+	padding: 20px 30px;
+	text-align: justify;
+	animation: fadeIn 0.5s ease-in-out;
+	
+}
+.back-button:hover {
+	background: #ff5050;
+}
+.back-button {
+	display: inline-block;
+	margin-top: 20px;
+	padding: 10px 20px;
+	color: #f9f9f9;
+	background: #b00020;
+	border: none;
+	border-radius: 8px;
+	text-transform: uppercase;
+	font-size: 14px;
+	font-weight: bold;
+	cursor: pointer;
+	transition: background 0.3s ease-in-out, transform 0.2s ease;
+	text-decoration: none;
+	text-align: center;
+}
+.back-button:hover {
+	background: #ff5050;
+	transform: translateY(-3px);
+}
+.back-button:active {
+	background: #a0001a;
+	transform: translateY(1px);
+}
+body {
+	font-family: Arial, sans-serif;
+	margin: 0;
+	padding: 0;
+	background: linear-gradient(135deg, #1a1a1a, #000000);
+	color: #f9f9f9;
+}
+header {
+	background: linear-gradient(90deg, #b00020, #800000);
+	color: #fff;
+	padding: 20px;
+	text-align: center;
+	box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+	font-size: 20px;
+}
+.container {
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+	max-width: 1200px;
+	margin: 20px auto;
+	padding: 20px;
+}
+.container li {
+	margin-top: 0;
+	color: #fff;
+	font-size: 24px;
+}
+.section {
+	background: linear-gradient(135deg, #2b2b2b, #1a1a1a);
+	border-radius: 12px;
+	box-shadow: 0 4px 15px rgba(0, 0, 0, 0.7);
+	padding: 20px;
+}
+
+.section h2 {
+	margin-top: 0;
+	color: #b00020;
+	font-size: 40px;
+}
+
+.section p {
+	margin-top: 0;
+	color: #fff;
+	font-size: 20px;
+}
+.section a {
+	text-decoration: none;
+}
+.comparison {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 20px;
+
+}
+.tool {
+	flex: 1 1 calc(33.333% - 20px);
+	background: linear-gradient(135deg, #400000, #600000);
+	border: 1px solid #b00020;
+	border-radius: 12px;
+	padding: 20px;
+	text-align: center;
+	transition: transform 0.3s, box-shadow 0.3s;
+	
+}
+.tool:hover {
+	transform: scale(1.05);
+	box-shadow: 0 6px 20px rgba(176, 0, 32, 0.8);
+}
+.tool img {
+	max-width: 100px;
+	margin-bottom: 15px;
+	border-radius: 50%;
+	border: 2px solid #b00020;
+}
+.tool h3 {
+	margin: 10px 0;
+	font-size: 18px;
+	color: #b00020;
+	font-size: 50px;
+}
+.tool ul {
+	margin: 10px 0;
+	font-size: 18px;
+	color: #b00020;
+	font-size: 50px;
+}
+.tool p {
+	font-size: 14px;
+	color: #ddd;
+	font-size: 20px;
+}
+footer {
+	text-align: center;
+	background: linear-gradient(90deg, #b00020, #800000);
+	color: #fff;
+	padding: 10px;
+	margin-top: 20px;
+	box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.5);
+	font-size: 20px;
+}
+@media (max-width: 768px) {
+	.tool {
+		flex: 1 1 calc(50% - 20px);
+	}
+}
+@media (max-width: 480px) {
+	.tool {
+		flex: 1 1 100%;
+	}
+}
+/*Xd Xd Xd Xd Adobe Xd Xd Xd Xd Xd Xd Xd XdXd Xd Xd Xd Adobe Xd Xd Xd Xd Xd Xd Xd XdXd Xd Xd Xd Adobe Xd Xd Xd Xd Xd Xd Xd XdXd Xd Xd Xd Adobe Xd Xd Xd Xd Xd Xd Xd Xd*/
+		/* Контейнер для изображения */
+.imageXd {
+    text-align: center; /* Центрируем изображение и подпись */
+    margin: 20px auto;
+    max-width: 600px; /* Ограничиваем ширину */
+}
+
+/* Изображение */
+.imageXd img {
+    width: 100%; /* Изображение адаптируется к ширине контейнера */
+    max-width: 900px; /* Максимальная ширина изображения */
+    height: auto; /* Сохраняем пропорции */
+    border-radius: 15px; /* Закругленные углы */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.7); /* Плавная тень */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Эффект при наведении */
+}
+
+/* Эффекты при наведении */
+.imageXd img:hover {
+    transform: scale(1.05); /* Увеличение изображения */
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.9); /* Усиление тени */
+}
+/* conva conva conva conva conva conva conva conva conva conva conva conva conva conva conva conva conva conva conva conva conva conva conva conva conva conva conva conva*/
+		/* Контейнер для изображения */
+.imageCon {
+    text-align: center; /* Центрируем изображение и подпись */
+    margin: 20px auto;
+    max-width: 600px; /* Ограничиваем ширину */
+}
+
+/* Изображение */
+.imageCon img {
+    width: 100%; /* Изображение адаптируется к ширине контейнера */
+    max-width: 500px; /* Максимальная ширина изображения */
+    height: auto; /* Сохраняем пропорции */
+    border-radius: 15px; /* Закругленные углы */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.7); /* Плавная тень */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Эффект при наведении */
+}
+
+/* Эффекты при наведении */
+.imageCon img:hover {
+    transform: scale(1.05); /* Увеличение изображения */
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.9); /* Усиление тени */
+}
